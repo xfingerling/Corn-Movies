@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 
 import { fetchDetailsMovieWithId } from "../../api/TheMoviedbAPI";
 
+import GoBackBtn from "../../Components/GoBackBtn/GoBackBtn";
 import MovieDetails from "../../Components/MovieDetails/MovieDetails";
 import AdditionalInformation from "../../Components/AdditionalInformation/AdditionalInformation";
 import Cast from "../../Components/Cast/Cast";
@@ -21,7 +22,6 @@ class MovieDetailsPage extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    console.log(1);
     fetchDetailsMovieWithId(id).then((movie) => this.setState({ movie }));
     fetchDetailsMovieWithId(id, "credits").then(({ cast }) =>
       this.setState({ cast })
@@ -31,12 +31,23 @@ class MovieDetailsPage extends Component {
     );
   }
 
+  handleGoBack = () => {
+    const { history, location } = this.props;
+
+    if (location.state) {
+      return history.push(location.state.from);
+    }
+
+    history.push("/");
+  };
+
   render() {
     const { params, path } = this.props.match;
     const { movie, cast, reviews } = this.state;
-    console.log(2);
+
     return (
       <div>
+        <GoBackBtn onGoBack={this.handleGoBack} />
         {movie && (
           <MovieDetails
             title={movie.title}

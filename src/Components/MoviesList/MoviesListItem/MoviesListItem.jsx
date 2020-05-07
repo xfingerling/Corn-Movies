@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
-const MoviesListItem = ({ id, title, name }) => {
-  return (
-    <li>
-      <NavLink to={`/movies/${id}`}>{name || title}</NavLink>
-    </li>
-  );
-};
+const MoviesListItem = ({ id, title, name, location }) => (
+  <li>
+    <NavLink to={{ pathname: `/movies/${id}`, state: { from: location } }}>
+      {name || title}
+    </NavLink>
+  </li>
+);
 
 MoviesListItem.propTypes = {
   id: PropTypes.number,
@@ -16,4 +16,4 @@ MoviesListItem.propTypes = {
   name: PropTypes.string,
 };
 
-export default MoviesListItem;
+export default withRouter(MoviesListItem);

@@ -7,7 +7,7 @@ const MovieDetails = ({ poster, title, overview, genres, voteAverage }) => {
   });
 
   return (
-    <>
+    <div>
       {poster && (
         <img src={`http://image.tmdb.org/t/p/w300/${poster}`} alt={title} />
       )}
@@ -17,7 +17,7 @@ const MovieDetails = ({ poster, title, overview, genres, voteAverage }) => {
       <p>{overview}</p>
       <h4>Genres</h4>
       <ul>{genresItem}</ul>
-    </>
+    </div>
   );
 };
 
