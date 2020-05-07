@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import style from "./MoviesList.module.css";
+
 import MoviesListItem from "./MoviesListItem/MoviesListItem";
 
 class MoviesList extends Component {
@@ -15,14 +17,14 @@ class MoviesList extends Component {
   render() {
     const { title, movies } = this.props;
 
-    const listItem = movies.map(({ id, name, title }) => {
-      return <MoviesListItem key={id} title={title} name={name} id={id} />;
+    const listItem = movies.map((movie) => {
+      return <MoviesListItem key={movie.id} movie={movie} />;
     });
 
     return (
       <>
         {!!title && <h1>{title}</h1>}
-        <ul>{listItem}</ul>
+        <ul className={style.movieList}>{listItem}</ul>
       </>
     );
   }

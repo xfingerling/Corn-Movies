@@ -5,12 +5,21 @@ import styles from "./Navigation.module.css";
 
 const Navigation = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <nav>
-        <NavLink to="/" exact activeClassName={styles.active}>
+        <NavLink
+          to="/"
+          exact
+          activeClassName={styles.active}
+          className={styles.nav__link}
+        >
           Home
         </NavLink>
-        <NavLink to="/movies" activeClassName={styles.active}>
+        <NavLink
+          to="/movies"
+          activeClassName={styles.active}
+          className={styles.nav__link}
+        >
           Movies
         </NavLink>
       </nav>

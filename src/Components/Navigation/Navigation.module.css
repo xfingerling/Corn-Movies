@@ -1,3 +1,18 @@
+.header {
+  background-color: rgb(175, 66, 218);
+  padding: 20px;
+}
+
+.nav__link {
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .active {
-  color: rgb(219, 40, 255);
+  border: 1px solid rgb(32, 32, 32);
+  border-radius: 15px;
+  color: rgb(230, 245, 28);
+  font-size: 22px;
 }
