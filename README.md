@@ -6,8 +6,8 @@
 
 # Get Started
 
-* clone branch `dev` with `git clone https://github.com/xfingerling/goit-react-hw-04-movies.git` or fork it and then clone it from your forked repo
-* `cd goit-react-hw-04-movies`
+* clone branch `dev` with `git clone https://github.com/xfingerling/corn-movie.git` or fork it and then clone it from your forked repo
+* `cd corn-movie`
 * `npm install`
 * `npm start`
 
