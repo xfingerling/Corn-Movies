@@ -59,7 +59,7 @@ class HomePage extends Component {
           render={(props) => (
             <InfiniteScrollList
               {...props}
-              title="Latest Movies"
+              title="Popular Movies"
               movies={latestMovies}
               fetchData={this.fetchMoreData}
             />

@@ -14,13 +14,14 @@ const InfiniteScrollList = ({ movies, title, fetchData }) => {
 
   return (
     <div>
-      <h2>{title}</h2>
+      <h2 className={style.title}>{title}</h2>
       <InfiniteScroll
         dataLength={movies}
         next={fetchData}
         hasMore={true}
         loader={<MyLoader />}
         endMessage={"That's all"}
+        style={{ overflow: "visible" }}
         className={style.movieList}
       >
         {listItem}

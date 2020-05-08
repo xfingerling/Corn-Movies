@@ -17,6 +17,7 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(180, 109, 189, 0.13);
 }
 
 img {

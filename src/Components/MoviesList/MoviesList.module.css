@@ -1,3 +1,10 @@
+.title {
+  padding: 20px;
+  text-align: center;
+  font-size: 36px;
+  color: rgb(32, 32, 32);
+}
+
 .movieList {
   width: 900px;
   margin: 0 auto;

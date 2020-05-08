@@ -1,13 +1,13 @@
 .movieListItem {
-  padding: 5px;
-  width: 170px;
+  padding-top: 5px;
+  height: 330px;
   text-align: center;
   background-color: rgb(218, 218, 218);
   position: relative;
 }
 
 .link {
-  height: 292px;
+  height: 330px;
   display: block;
   overflow: hidden;
   font-size: 14px;
@@ -17,6 +17,7 @@
 
 .img {
   margin: 0 auto;
+  height: 292px;
 }
 
 .rate {
@@ -30,7 +31,7 @@
   border-radius: 50%;
   position: absolute;
   right: -8px;
-  top: 232px;
+  top: 270px;
 }
 
 .rateSpan {
