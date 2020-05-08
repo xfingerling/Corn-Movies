@@ -1,13 +1,39 @@
 .movieListItem {
-  max-width: 200px;
+  padding: 5px;
+  width: 170px;
   text-align: center;
   background-color: rgb(218, 218, 218);
+  position: relative;
 }
 
 .link {
+  height: 292px;
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
   text-decoration: none;
+  color: rgb(32, 32, 32);
 }
 
 .img {
   margin: 0 auto;
+}
+
+.rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(175, 66, 218);
+  color: rgb(230, 245, 28);
+  border-radius: 50%;
+  position: absolute;
+  right: -8px;
+  top: 232px;
+}
+
+.rateSpan {
+  position: relative;
+  top: -1px;
 }

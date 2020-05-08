@@ -1,23 +1,43 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-import { fetchTrendingDayMovies } from "../../api/TheMoviedbAPI";
+import {
+  page,
+  fetchTrendingDayMovies,
+  fetchLatestPublishedMovies,
+} from "../../api/TheMoviedbAPI";
 
 import Navigation from "../../Components/Navigation/Navigation";
 import MoviesList from "../../Components/MoviesList/MoviesList";
 
+import InfiniteScrollList from "../../Components/InfiniteScrollList/InfiniteScrollList";
+
 class HomePage extends Component {
   state = {
-    movies: [],
+    trendingMovies: [],
+    latestMovies: [],
   };
 
   componentDidMount() {
     fetchTrendingDayMovies().then(({ results }) =>
-      this.setState({ movies: results })
+      this.setState({ trendingMovies: results })
+    );
+
+    fetchLatestPublishedMovies(page).then(({ results }) =>
+      this.setState({ latestMovies: results })
     );
   }
+
+  fetchMoreData = () => {
+    page.popular += 1;
+
+    fetchLatestPublishedMovies(page.popular).then(({ results }) =>
+      this.setState({ latestMovies: [...this.state.latestMovies, ...results] })
+    );
+  };
+
   render() {
-    const { movies } = this.state;
+    const { trendingMovies, latestMovies } = this.state;
 
     return (
       <>
@@ -26,7 +46,23 @@ class HomePage extends Component {
           exact
           path="/"
           render={(props) => (
-            <MoviesList {...props} title="Trending Tooday" movies={movies} />
+            <MoviesList
+              {...props}
+              title="Trending Tooday Movies"
+              movies={trendingMovies}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/"
+          render={(props) => (
+            <InfiniteScrollList
+              {...props}
+              title="Latest Movies"
+              movies={latestMovies}
+              fetchData={this.fetchMoreData}
+            />
           )}
         />
       </>

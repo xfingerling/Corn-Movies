@@ -23,8 +23,8 @@ class MoviesList extends Component {
 
     return (
       <>
-        {!!title && <h1>{title}</h1>}
-        <ul className={style.movieList}>{listItem}</ul>
+        {!!title && <h2>{title}</h2>}
+        <div className={style.movieList}>{listItem}</div>
       </>
     );
   }
