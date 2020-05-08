@@ -1,6 +1,6 @@
 # Corn Movie <img src="http://i.piccy.info/i9/228eddd34adaa399550b60f22d0143c1/1588942511/221082/1376251/popcorn_PNG66_1_.png" width="60">
 
-[Demo](https://movie-search-ozs.netlify.app/)
+[Demo](https://corn-movie.netlify.app/)
 
 ***release coming*** 😃
 
