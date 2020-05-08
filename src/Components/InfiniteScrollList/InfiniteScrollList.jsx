@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import MyLoader from "../Loader/Loader";
@@ -28,6 +29,12 @@ const InfiniteScrollList = ({ movies, title, fetchData }) => {
       </InfiniteScroll>
     </div>
   );
+};
+
+InfiniteScrollList.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string,
+  fetchData: PropTypes.func,
 };
 
 export default InfiniteScrollList;

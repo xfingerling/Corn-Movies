@@ -12,6 +12,7 @@ class MoviesList extends Component {
 
   static propTypes = {
     title: PropTypes.string,
+    movies: PropTypes.arrayOf(PropTypes.object),
   };
 
   render() {
@@ -29,9 +30,5 @@ class MoviesList extends Component {
     );
   }
 }
-
-MoviesList.propTypes = {
-  title: PropTypes.string,
-};
 
 export default MoviesList;
