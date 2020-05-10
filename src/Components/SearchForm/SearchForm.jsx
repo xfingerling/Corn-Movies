@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SearchForm = ({ onSubmit }) => {
   return (
@@ -12,6 +13,10 @@ const SearchForm = ({ onSubmit }) => {
       <button type="submit">Search</button>
     </form>
   );
+};
+
+SearchForm.propTypes = {
+  onSubmit: PropTypes.func,
 };
 
 export default SearchForm;

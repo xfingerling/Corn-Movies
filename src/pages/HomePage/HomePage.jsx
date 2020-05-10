@@ -11,7 +11,6 @@ import {
 
 import Navigation from "../../Components/Navigation/Navigation";
 import MoviesList from "../../Components/MoviesList/MoviesList";
-
 import InfiniteScrollList from "../../Components/InfiniteScrollList/InfiniteScrollList";
 
 class HomePage extends Component {

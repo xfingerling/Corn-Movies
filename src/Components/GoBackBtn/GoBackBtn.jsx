@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import style from "./GoBackBtn.module.css";
 
@@ -7,5 +8,9 @@ const GoBackBtn = ({ onGoBack }) => (
     Go Back
   </button>
 );
+
+GoBackBtn.propTypes = {
+  onGoBack: PropTypes.func,
+};
 
 export default GoBackBtn;

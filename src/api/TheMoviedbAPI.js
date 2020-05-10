@@ -5,6 +5,7 @@ const API_KEY = "?api_key=20cd267abb960a552b7abbc1653318ee";
 
 const page = {
   popular: 1,
+  genres: 1,
 };
 
 async function fetchTrendingDayMovies() {
@@ -41,7 +42,23 @@ async function fetchMovieByKeyword(query) {
 }
 
 async function fetchLatestPublishedMovies(page) {
-  const queryString = `${baseUrl}/discover/movie${API_KEY}&sort_by=popularity.desc&page=${page}`;
+  const queryString = `${baseUrl}/discover/movie${API_KEY}&&sort_by=popularity.desc&page=${page}`;
+
+  const { data } = await axios.get(queryString);
+
+  return data;
+}
+
+async function fetchGenresList() {
+  const queryString = `${baseUrl}/genre/movie/list${API_KEY}`;
+
+  const { data } = await axios.get(queryString);
+
+  return data;
+}
+
+async function fetchMoviesByGenres(genresId, page) {
+  const queryString = `${baseUrl}/discover/movie${API_KEY}&with_genres=${genresId}&sort_by=popularity.desc&page=${page}`;
 
   const { data } = await axios.get(queryString);
 
@@ -54,4 +71,6 @@ export {
   fetchDetailsMovieWithId,
   fetchMovieByKeyword,
   fetchLatestPublishedMovies,
+  fetchGenresList,
+  fetchMoviesByGenres,
 };
