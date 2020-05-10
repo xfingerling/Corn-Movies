@@ -1,5 +1,12 @@
+@value primary-bg-color from "../../variables.module.css";
+@value primari-text-color from "../../variables.module.css";
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
 .header {
-  background-color: rgb(175, 66, 218);
+  background-color: primary-bg-color;
   padding: 20px;
 }
 
@@ -13,6 +20,6 @@
 .active {
   border: 1px solid rgb(32, 32, 32);
   border-radius: 15px;
-  color: rgb(230, 245, 28);
+  color: primari-text-color;
   font-size: 22px;
 }

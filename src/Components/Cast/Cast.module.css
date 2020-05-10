@@ -1,0 +1,20 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.listItem {
+  text-align: center;
+  width: 18%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 15px -7px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 4px;
+}

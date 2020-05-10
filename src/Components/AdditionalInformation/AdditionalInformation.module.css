@@ -1,0 +1,18 @@
+@value primary-bg-color from "../../variables.module.css";
+@value primari-text-color from "../../variables.module.css";
+
+.wrap {
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  padding: 10px;
+  background-color: primary-bg-color;
+  color: primari-text-color;
+  border-radius: 5px;
+}
+
+.link:not(:last-of-type) {
+  margin-right: 10px;
+}

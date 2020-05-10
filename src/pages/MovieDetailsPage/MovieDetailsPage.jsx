@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Route, Switch } from "react-router-dom";
 
+import style from "./MovieDetailsPage.module.css";
+
 import { fetchDetailsMovieWithId } from "../../api/TheMoviedbAPI";
 
 import GoBackBtn from "../../Components/GoBackBtn/GoBackBtn";
@@ -16,6 +18,8 @@ class MovieDetailsPage extends Component {
       params: PropTypes.object,
       path: PropTypes.string,
     }),
+    history: PropTypes.object,
+    location: PropTypes.object,
   };
 
   state = { movie: null, cast: null, reviews: null };
@@ -24,10 +28,10 @@ class MovieDetailsPage extends Component {
     const { id } = this.props.match.params;
     fetchDetailsMovieWithId(id).then((movie) => this.setState({ movie }));
     fetchDetailsMovieWithId(id, "credits").then(({ cast }) =>
-      this.setState({ cast })
+      this.setState({ cast }),
     );
     fetchDetailsMovieWithId(id, "reviews").then(({ results }) =>
-      this.setState({ reviews: results })
+      this.setState({ reviews: results }),
     );
   }
 
@@ -46,7 +50,7 @@ class MovieDetailsPage extends Component {
     const { movie, cast, reviews } = this.state;
 
     return (
-      <div>
+      <div className={style.container}>
         <GoBackBtn onGoBack={this.handleGoBack} />
         {movie && (
           <MovieDetails

@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+}
+
+.listItem {
+  margin-bottom: 20px;
+}
+
+.authorText {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.author {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.content {
+  padding-left: 20px;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import queryString from "query-string";
+
+import style from "./MoviesPage.module.css";
 
 import { fetchMovieByKeyword } from "../../api/TheMoviedbAPI";
 
@@ -8,6 +11,11 @@ import SearchForm from "../../Components/SearchForm/SearchForm";
 import MoviesList from "../../Components/MoviesList/MoviesList";
 
 class MoviesPage extends Component {
+  static propTypes = {
+    history: PropTypes.object,
+    location: PropTypes.object,
+  };
+
   state = { movies: [], query: "" };
 
   handleQueryChange = (e) => {
@@ -28,7 +36,7 @@ class MoviesPage extends Component {
 
     if (query) {
       fetchMovieByKeyword(query).then(({ results }) =>
-        this.setState({ movies: results })
+        this.setState({ movies: results }),
       );
     }
   }
@@ -42,7 +50,7 @@ class MoviesPage extends Component {
 
       if (query) {
         fetchMovieByKeyword(query).then(({ results }) =>
-          this.setState({ movies: results })
+          this.setState({ movies: results }),
         );
       }
     }
@@ -51,7 +59,7 @@ class MoviesPage extends Component {
   render() {
     const { movies } = this.state;
     return (
-      <div>
+      <div className={style.container}>
         <SearchForm onSubmit={this.handleQueryChange} />
         {!!movies.length && <MoviesList movies={movies} />}
       </div>

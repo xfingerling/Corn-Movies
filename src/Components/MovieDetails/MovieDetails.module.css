@@ -1,0 +1,44 @@
+.detailsWrap {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.wrap {
+  padding-left: 30px;
+}
+
+.wrap * {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.caption {
+  font-size: 20px;
+}
+
+.scoreText {
+  margin-left: 10px;
+}
+
+.score {
+  padding: 6px;
+  background-color: rgb(175, 66, 218);
+  color: rgb(230, 245, 28);
+  border-radius: 50%;
+}
+
+.overview {
+  padding-left: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.listItem {
+  padding: 0 10px;
+}
