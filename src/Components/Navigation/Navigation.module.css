@@ -1,5 +1,6 @@
 @value primary-bg-color from "../../variables.module.css";
 @value primari-text-color from "../../variables.module.css";
+
 .container {
   width: 1024px;
   margin: 0 auto;
@@ -8,6 +9,7 @@
 .header {
   background-color: primary-bg-color;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .nav__link {

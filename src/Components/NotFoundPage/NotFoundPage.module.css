@@ -1,0 +1,25 @@
+@value primary-bg-color from "../../variables.module.css";
+
+.wrap {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  font-size: 250px;
+  font-weight: 500;
+}
+
+.link {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid rgb(24, 24, 24);
+  border-radius: 3px;
+}
+
+.link:hover {
+  background-color: primary-bg-color;
+}

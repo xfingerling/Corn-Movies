@@ -1,4 +1,23 @@
+@value primary-bg-color from "../../variables.module.css";
+@value primari-text-color from "../../variables.module.css";
+
 .btn {
   cursor: pointer;
   padding: 5px;
+  position: absolute;
+  top: 414px;
+  left: 330px;
+  background-color: primary-bg-color;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn::before {
+  content: "\1F878";
+  display: inline-block;
+  font-size: 20px;
+}
+
+.btn:hover {
+  color: primari-text-color;
 }

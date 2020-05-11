@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
 
 import style from "./HomePage.module.css";
 
@@ -9,7 +8,6 @@ import {
   fetchLatestPublishedMovies,
 } from "../../api/TheMoviedbAPI";
 
-import Navigation from "../../Components/Navigation/Navigation";
 import MoviesList from "../../Components/MoviesList/MoviesList";
 import InfiniteScrollList from "../../Components/InfiniteScrollList/InfiniteScrollList";
 
@@ -41,34 +39,14 @@ class HomePage extends Component {
     const { trendingMovies, latestMovies } = this.state;
 
     return (
-      <>
-        <Navigation />
-        <div className={style.container}>
-          <Route
-            exact
-            path="/"
-            render={(props) => (
-              <MoviesList
-                {...props}
-                title="Trending Tooday Movies"
-                movies={trendingMovies}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/"
-            render={(props) => (
-              <InfiniteScrollList
-                {...props}
-                title="Popular Movies"
-                movies={latestMovies}
-                fetchData={this.fetchMoreData}
-              />
-            )}
-          />
-        </div>
-      </>
+      <div className={style.container}>
+        <MoviesList title="Trending Tooday Movies" movies={trendingMovies} />
+        <InfiniteScrollList
+          title="Popular Movies"
+          movies={latestMovies}
+          fetchData={this.fetchMoreData}
+        />
+      </div>
     );
   }
 }

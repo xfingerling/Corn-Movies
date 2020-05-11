@@ -9,10 +9,13 @@
   text-decoration: none;
   padding: 10px;
   background-color: primary-bg-color;
-  color: primari-text-color;
   border-radius: 5px;
 }
 
 .link:not(:last-of-type) {
   margin-right: 10px;
+}
+
+.link:hover {
+  color: primari-text-color;
 }
