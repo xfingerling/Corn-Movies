@@ -31,7 +31,7 @@ const MoviesApp = () => {
     <div>
       <Navigation />
 
-      <Suspense fallback={MyLoader}>
+      <Suspense fallback={<MyLoader />}>
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/movies/:id" component={MovieDetailsPage} />

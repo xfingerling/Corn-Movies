@@ -7,10 +7,18 @@ import style from "./AdditionalInformation.module.css";
 const AdditionalInformation = ({ id }) => {
   return (
     <div className={style.wrap}>
-      <NavLink to={`/movies/${id}/cast`} className={style.link}>
+      <NavLink
+        to={`/movies/${id}/cast`}
+        className={style.link}
+        activeClassName={style.active}
+      >
         Cast
       </NavLink>
-      <NavLink to={`/movies/${id}/reviews`} className={style.link}>
+      <NavLink
+        to={`/movies/${id}/reviews`}
+        className={style.link}
+        activeClassName={style.active}
+      >
         Reviews
       </NavLink>
     </div>
