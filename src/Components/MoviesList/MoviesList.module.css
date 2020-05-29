@@ -10,4 +10,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2vw;
+  width: 1024px;
+  margin: 0 auto;
 }
