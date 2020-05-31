@@ -4,17 +4,17 @@ import PropTypes from "prop-types";
 
 import style from "./AdditionalInformation.module.css";
 
-const AdditionalInformation = ({ id }) => (
+const AdditionalInformation = ({ id, location }) => (
   <div className={style.wrap}>
     <NavLink
-      to={`/movies/${id}/cast`}
+      to={{ pathname: "/movies/${id}/cast", state: { from: location } }}
       className={style.link}
       activeClassName={style.active}
     >
       Cast
     </NavLink>
     <NavLink
-      to={`/movies/${id}/reviews`}
+      to={{ pathname: "/movies/${id}/reviews", state: { from: location } }}
       className={style.link}
       activeClassName={style.active}
     >

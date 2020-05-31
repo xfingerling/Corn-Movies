@@ -17,7 +17,7 @@ const MoviesListItem = ({ movie, location }) => {
         className={style.link}
       >
         <img
-          src={`http://image.tmdb.org/t/p/w200/${poster}`}
+          src={poster && `http://image.tmdb.org/t/p/w200/${poster}`}
           alt={name || title}
           className={style.img}
         />
@@ -28,9 +28,13 @@ const MoviesListItem = ({ movie, location }) => {
 };
 
 MoviesListItem.propTypes = {
-  id: PropTypes.number,
-  title: PropTypes.string,
-  name: PropTypes.string,
+  movie: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    name: PropTypes.string,
+  }),
+
+  location: PropTypes.object,
 };
 
 export default withRouter(MoviesListItem);

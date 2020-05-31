@@ -48,6 +48,7 @@ class MovieDetailsPage extends Component {
   render() {
     const { params, path } = this.props.match;
     const { movie, cast, reviews } = this.state;
+    const { location } = this.props;
 
     return (
       <div className={style.container}>
@@ -61,7 +62,7 @@ class MovieDetailsPage extends Component {
             poster={movie.poster_path}
           />
         )}
-        <AdditionalInformation id={params.id} />
+        <AdditionalInformation id={params.id} location={location.state.from} />
         <Switch>
           {cast && (
             <Route
