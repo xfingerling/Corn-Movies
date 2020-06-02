@@ -5,24 +5,24 @@ import MyLoader from "../Loader/Loader";
 import Navigation from "../../Components/Navigation/Navigation";
 
 const HomePage = lazy(() =>
-  import("../../pages/HomePage/HomePage" /* webpackChunkName: "home-page" */),
+  import("../../Pages/HomePage/HomePage" /* webpackChunkName: "home-page" */),
 );
 
 const MoviesPage = lazy(() =>
   import(
-    "../../pages/MoviesPage/MoviesPage" /* webpackChunkName: "movies-page" */
+    "../../Pages/MoviesPage/MoviesPage" /* webpackChunkName: "movies-page" */
   ),
 );
 
 const MovieDetailsPage = lazy(() =>
   import(
-    "../../pages/MovieDetailsPage/MovieDetailsPage" /* webpackChunkName: "movie-details-page" */
+    "../../Pages/MovieDetailsPage/MovieDetailsPage" /* webpackChunkName: "movie-details-page" */
   ),
 );
 
 const NotFoundPage = lazy(() =>
   import(
-    "../../pages/NotFoundPage/NotFoundPage" /* webpackChunkName: "not-found-page" */
+    "../../Pages/NotFoundPage/NotFoundPage" /* webpackChunkName: "not-found-page" */
   ),
 );
 

@@ -6,13 +6,9 @@ import MoviesApp from "./Components/MoviesApp/MoviesApp";
 
 import "./index.css";
 
-const App = () => {
-  return <MoviesApp />;
-};
-
 render(
   <BrowserRouter>
-    <App />
+    <MoviesApp />
   </BrowserRouter>,
   document.getElementById("root"),
 );
