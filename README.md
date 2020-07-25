@@ -2,7 +2,7 @@
 
 Movie search and storage applications
 
-[Demo](https://corn-movie.netlify.app/)
+[Demo](https://goit-react-hw-04-movies-oleg.netlify.app/)
 
 **_release coming_** 😃
 
